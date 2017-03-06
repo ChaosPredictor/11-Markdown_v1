@@ -23,7 +23,7 @@ class App extends React.Component {
   render() {
     return (
       <div className="inputBox">
-        <input value={this.state.inputText}
+        <textarea value={this.state.inputText}
                onChange={this.handleChange} />
 		{/*<input value={this.state.outputText} />*/}
 		<div dangerouslySetInnerHTML={this.getMarkdownText(this.state.outputText)} />

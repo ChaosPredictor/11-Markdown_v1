@@ -1,8 +1,7 @@
 //import React, { Component } from 'react';
 import React from 'react';
 //import ReactDOM from 'react-dom';
-import './App.css';
-import { Grid } from 'reflexbox'
+//import './App.css';
 
 var marked = require('marked');
 
@@ -24,16 +23,12 @@ class App extends React.Component {
 
   render() {
     return (
-      <div className="App">  
-		<Grid col={6} px={2}>
+		<div className="App">  
 			<textarea className="inputBox" value={this.state.inputText}
                onChange={this.handleChange} />
-		</Grid>
 		{/*<input value={this.state.outputText} />*/}
-		<Grid col={6} px={2}>
 			<div dangerouslySetInnerHTML={this.getMarkdownText(this.state.outputText)} />
-		</Grid>
-      </div>
+		</div>
     );
   }
 }

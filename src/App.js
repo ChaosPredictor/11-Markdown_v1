@@ -2,6 +2,7 @@
 import React from 'react';
 //import ReactDOM from 'react-dom';
 //import './App.css';
+import { Grid, Row, Col } from 'react-bootstrap';
 
 var marked = require('marked');
 
@@ -24,10 +25,14 @@ class App extends React.Component {
   render() {
     return (
 		<div className="App">  
-			<textarea className="inputBox" value={this.state.inputText}
-               onChange={this.handleChange} />
-		{/*<input value={this.state.outputText} />*/}
-			<div dangerouslySetInnerHTML={this.getMarkdownText(this.state.outputText)} />
+			<Grid>
+				<Row className="show-grid">
+					<Col md={6}>
+						<textarea className="inputBox" value={this.state.inputText} onChange={this.handleChange} />
+					</Col>
+					<Col md={6}><div dangerouslySetInnerHTML={this.getMarkdownText(this.state.outputText)} /></Col>
+				</Row>
+			</Grid>
 		</div>
     );
   }

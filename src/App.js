@@ -1,7 +1,7 @@
 //import React, { Component } from 'react';
 import React from 'react';
 //import ReactDOM from 'react-dom';
-//import './App.css';
+import './App.css';
 import { Grid, Row, Col } from 'react-bootstrap';
 
 var marked = require('marked');
